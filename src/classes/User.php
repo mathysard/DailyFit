@@ -2,9 +2,10 @@
 
     try {
         require_once $_SERVER["DOCUMENT_ROOT"] . "/src/classes/Database.php";
-    
-        class User {
 
+        
+        class User {
+            
             private $db;
             private $firstname;
             private $lastname;
@@ -15,7 +16,7 @@
             private $failImageLocation;
             private $imageDirectory;
             private $loginNotActive;
-
+            
             public function __construct($firstname, $lastname, $email, $password, $successLocation, $failLocation, $failImageLocation, $imageDirectory, $loginNotActive) {
                 $db = new Database();
                 $this->db = $db->database();

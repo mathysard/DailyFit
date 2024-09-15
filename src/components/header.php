@@ -36,15 +36,6 @@
                         <a href="../../../../../src/app/activity/index.php" id="activityNavbar" class="block py-2 px-3 rounded hover:bg-gray-100 md:hover:bg-transparent md:p-0 md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700 hover:underline">Activity</a>
                     </li>
                     <?php } ?>
-                    <li>
-                        <a href="#" class="block py-2 px-3 rounded hover:bg-gray-100 md:hover:bg-transparent md:p-0 md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700 hover:underline">About</a>
-                    </li>
-                    <li>
-                        <a href="#" class="block py-2 px-3 rounded hover:bg-gray-100 md:hover:bg-transparent md:p-0 md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700 hover:underline">Services</a>
-                    </li>
-                    <li>
-                        <a href="#" class="block py-2 px-3 rounded hover:bg-gray-100 md:hover:bg-transparent md:p-0 md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700 hover:underline">Contact</a>
-                    </li>
                 </ul>
             </div>
 
@@ -55,9 +46,12 @@
                     </a>
                 <?php } else { ?>
                     <div class="rounded-full hover:cursor-pointer h-fit bg-[url('../../../../../src/assets/profile_picture/<?= $_SESSION["user"]["image"]?>')] p-4 bg-cover bg-center"></div>
-                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="ml-2 my-auto size-6 hover:cursor-pointer">
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="ml-2 my-auto size-6 hover:cursor-pointer" id="userMenu">
                         <path stroke-linecap="round" stroke-linejoin="round" d="m19.5 8.25-7.5 7.5-7.5-7.5" />
                     </svg>
+                    <div class="absolute bg-white rounded-lg hidden" style="top: 110%; right: 10%" id="logoutButton">
+                        <a href="../../../../../src/app/logout.php"><div class="py-2 px-8 text-red-500 hover:cursor-pointer hover:text-red-700 active:text-red-800">Déconnexion</div></a>
+                    </div>
                 <?php } ?>
             </div>
         </div>
